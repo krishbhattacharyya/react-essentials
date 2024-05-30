@@ -1,5 +1,6 @@
 import "./App.css";
-import ReactPortalExample from "./usage/react-portal";
+import ReactPortalExample from "./usage/modal/react-portal";
+import ReactSmartSearch from './usage/search/react-smart-search'
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <h1>All essential usecases in react</h1>
       <p>Right way to implement the react code</p>
       <ReactPortalExample />
+      <ReactSmartSearch />
     </>
   );
 }
