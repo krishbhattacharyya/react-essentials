@@ -15,7 +15,8 @@ export default function ModalReactPortal({
   }
   return (
     <>
-      {createPortal(
+      {
+      createPortal(
         <>
           <div className={classes.modalWrapper}></div>
           <div className={classes.modalContent}>

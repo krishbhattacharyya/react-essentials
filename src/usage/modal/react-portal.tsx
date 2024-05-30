@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import ModalReactPortal from "../useconcepts/modal-react-portal";
+import ModalReactPortal from "../../useconcepts/modal/modal-react-portal";
 export default function ReactPortalExample() {
   const [showModalReactPortal, setShowModalReactPortal] =
     useState<boolean>(false);
   return (
     <>
-      <h3>React portal</h3>
+      <h3>React using portal</h3>
       <div className="App">
         <button onClick={() => setShowModalReactPortal(true)}>
           open modal
