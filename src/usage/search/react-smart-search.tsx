@@ -1,4 +1,4 @@
-import SearchComponent from "../../useconcepts/search/serach-component"
+import SearchComponent from "../../useconcepts/search/search-component"
 import classes from "./react-smart-search.module.css";
 export default function ReactSmartSearch(){
     return(

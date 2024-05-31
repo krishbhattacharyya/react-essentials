@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import SearchComponentAddUserForm from "./serach-component-add-userform";
+import SearchComponentAddUserForm from "./search-component-add-userform";
 import userEvent from "@testing-library/user-event";
 
 test("Test the search add user form component", async () => {

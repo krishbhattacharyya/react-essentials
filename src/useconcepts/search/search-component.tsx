@@ -1,6 +1,7 @@
-import React, { useState, useMemo, useRef } from "react";
-import SearchComponentAddUserForm from "./serach-component-add-userform";
-import classes from "./serach-component.module.css";
+import React, { useState, useMemo } from "react";
+import SearchComponentAddUserForm from "./search-component-add-userform";
+import SearchItems from "./search-items";
+import classes from "./search-component.module.css";
 import { v4 as uuidv4 } from "uuid";
 
 export type UserType = {
@@ -9,7 +10,7 @@ export type UserType = {
   email: string;
   address: string;
 };
-type UserArrayType = UserType[] | [];
+export type UserArrayType = UserType[] | [];
 
 /* not required later will see*/
 /*type MyForm<Elements> = Elements & {
@@ -17,7 +18,6 @@ type UserArrayType = UserType[] | [];
   email: HTMLInputElement;
   address: HTMLInputElement;
 };*/
-
 
 export default function SearchComponent() {
   const [userData, setUserData] = useState<UserArrayType>([]);
@@ -31,7 +31,7 @@ export default function SearchComponent() {
     );
   }
 
-  const serachArray = useMemo(
+  const searchArray = useMemo(
     () => filterItems(userData, query),
     [userData, query]
   );
@@ -71,15 +71,7 @@ export default function SearchComponent() {
       <div className={classes.searchContent}>
         {
           <ul>
-            {serachArray.map((item: UserType) => {
-              return (
-                <li key={item.id}>
-                  <div>{item.userName}</div>
-                  <div>{item.email}</div>
-                  <div>{item.address}</div>
-                </li>
-              );
-            })}
+            <SearchItems searchArray={searchArray} />
           </ul>
         }
       </div>
