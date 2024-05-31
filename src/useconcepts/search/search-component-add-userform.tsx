@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {UserType} from './serach-component'
+import {UserType} from './search-component'
 
 export default function SearchComponentAddUserForm({handleSubmit}:{handleSubmit: React.FormEventHandler<HTMLFormElement>}){
     const [addItemData, setAddItemData] = useState<UserType>({
