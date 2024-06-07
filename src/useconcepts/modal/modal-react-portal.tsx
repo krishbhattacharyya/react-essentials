@@ -1,15 +1,7 @@
-import React from "react";
+import React, {forwardRef} from "react";
 import { createPortal } from "react-dom";
 import classes from "./modal-react-portal.module.css";
-export default function ModalReactPortal({
-  show,
-  children,
-  close,
-}: {
-  show: boolean;
-  children: React.ReactNode;
-  close: () => void;
-}) {
+const ModalReactPortal = forwardRef(function ModalReactPortalinner({ show, children, close }: { show: boolean; children: React.ReactNode; close: () => void; },ref:any) {
   if (!show) {
     return null;
   }
@@ -18,7 +10,7 @@ export default function ModalReactPortal({
       {
       createPortal(
         <>
-          <div className={classes.modalWrapper}></div>
+          <div className={classes.modalWrapper} ref={ref}></div>
           <div className={classes.modalContent}>
             <div className={classes.modalHeading}>
               <button onClick={close}>close</button>
@@ -30,4 +22,6 @@ export default function ModalReactPortal({
       )}
     </>
   );
-}
+})
+
+export default ModalReactPortal; 
