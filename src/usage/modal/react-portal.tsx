@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import ModalReactPortal from "../../useconcepts/modal/modal-react-portal";
 export default function ReactPortalExample() {
-  const [showModalReactPortal, setShowModalReactPortal] =
-    useState<boolean>(false);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const [showModalReactPortal, setShowModalReactPortal] = useState(false);
+  
   return (
     <>
       <h3>React using portal</h3>
@@ -13,6 +14,7 @@ export default function ReactPortalExample() {
         <ModalReactPortal
           show={showModalReactPortal}
           close={() => setShowModalReactPortal(false)}
+          ref={modalRef}
         >
           Modal Content
         </ModalReactPortal>
