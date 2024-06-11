@@ -11,7 +11,7 @@ const ReactSmartSearch = lazy(
   () => import("./usage/search/react-smart-search")
 );
 const ReactHOC = lazy(() => import("./usage/hoc/react-hoc"));
-const ReactCustomHooks = lazy(() => import("./usage/hook/react--custom-hook"));
+const ReactCustomHooks = lazy(() => import("./usage/customhook/react--custom-hook"));
 
 const router = createBrowserRouter([
   {
