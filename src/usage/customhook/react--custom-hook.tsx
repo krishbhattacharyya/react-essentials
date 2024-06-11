@@ -1,7 +1,7 @@
 import {useRef} from 'react';
-import useLocalStorage from "../../useconcepts/hook/uselocalstorage/use-local-storage";
-import useFetch from "../../useconcepts/hook/usefetch/use-fetch";
-import useDebounce from "../../useconcepts/hook/usedebounce/use-debounce";
+import useLocalStorage from "../../useconcepts/customhook/uselocalstorage/use-local-storage";
+import useFetch from "../../useconcepts/customhook/usefetch/use-fetch";
+import useDebounce from "../../useconcepts/customhook/usedebounce/use-debounce";
 
 
 
