@@ -9,7 +9,10 @@ export default function Navigation(){
                     <NavLink to={"./"}>Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to={"./customhooks"}>Hooks</NavLink>
+                    <NavLink to={"./builtinhooks"}>Built In Hooks</NavLink>
+                </li>
+                <li>
+                    <NavLink to={"./customhooks"}>Custom Hooks</NavLink>
                 </li>
                 <li>
                     <NavLink  to={"./hocs"}>Hocs</NavLink>
@@ -19,6 +22,9 @@ export default function Navigation(){
                 </li>
                 <li>
                     <NavLink to={"./smartsearch"}>React smart search</NavLink>
+                </li>
+                <li>
+                    <NavLink to={"./reactcontext"}>React context</NavLink>
                 </li>
             </ul>
         </div>

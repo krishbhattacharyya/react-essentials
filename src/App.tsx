@@ -11,7 +11,9 @@ const ReactSmartSearch = lazy(
   () => import("./usage/search/react-smart-search")
 );
 const ReactHOC = lazy(() => import("./usage/hoc/react-hoc"));
-const ReactCustomHooks = lazy(() => import("./usage/customhook/react--custom-hook"));
+const ReactCustomHooks = lazy(() => import("./usage/customhook/react-custom-hook"));
+const BuiltInHooks = lazy(() => import("./usage/builtinhook/built-in-hook"));
+const ReactContext = lazy(()=>import("./usage//context/react-context"))
 
 const router = createBrowserRouter([
   {
@@ -57,6 +59,22 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<div>Loading...</div>}>
             <ReactPortalExample />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/builtinhooks",
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <BuiltInHooks />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/reactcontext",
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <ReactContext />
           </Suspense>
         ),
       },

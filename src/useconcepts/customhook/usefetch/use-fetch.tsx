@@ -14,7 +14,7 @@ export default function useFetch(url:string){
         try {
             const res = await fetch(url);
             const data = await res.json();
-            setData(data.slice(0,5));
+            setData(data); //data.slice(0,5)
         } catch(err){
             setError('something went wrong');
         } finally {
